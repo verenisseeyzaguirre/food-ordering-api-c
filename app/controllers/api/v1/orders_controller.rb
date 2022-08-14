@@ -1,5 +1,5 @@
-class Api::V1::OrdersController < ApplicationController
-
+class Api::V1::OrdersController < Api::V1::BaseController
+  
   def show
     @order = Order.find(params[:id])
   end
