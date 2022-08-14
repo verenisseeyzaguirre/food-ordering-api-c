@@ -1,5 +1,9 @@
 class Api::V1::OrdersController < Api::V1::BaseController
   
+  def index
+    @orders = Order.all
+  end
+
   def show
     @order = Order.find(params[:id])
   end
